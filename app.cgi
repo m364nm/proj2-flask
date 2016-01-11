@@ -5,16 +5,16 @@
 import site
 from pathlib import Path  # For debugging
 #
-# The following should refer to your own 
-# directories.  Broken into pieces so it's 
-# easy to vary just the part that changes from 
+# The following should refer to your own
+# directories.  Broken into pieces so it's
+# easy to vary just the part that changes from
 # project to project.
 #
-ClassDir="/home/faculty/michal/public_html/htbin/cis322"
+ClassDir="/home/users/mcmillan/public_html/htbin/cis399"
 ProjDir="{}/proj2-flask".format(ClassDir)
 EnvLib="{}/env/lib/python3.4/site-packages".format(ProjDir)
 
-# A little self-check to make sure we got it right ... 
+# A little self-check to make sure we got it right ...
 p = Path(EnvLib)
 assert p.exists() and p.is_dir()
 
