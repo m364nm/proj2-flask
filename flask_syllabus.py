@@ -77,6 +77,29 @@ def format_arrow_date( date ):
         return "(bad date)"
 
 
+@app.template_filter( 'iscurrent' )
+def check_if_current_week( value ):
+    try:
+        date = arrow.get(value)
+        now = arrow.utcnow()
+        print("Checking if the current week: ")
+        print(date)
+        print(now)
+
+        cur = arrow.Arrow.isocalendar(now)
+        check = arrow.Arrow.isocalendar(date)
+
+        if cur[1] is check[1]:
+            print("Cur and check are the same: ")
+            print(cur)
+            print(check)
+            return True
+        else:
+            return False
+
+    except:
+        return "iscurrent failed"
+
 #############
 #
 # Set up to run from cgi-bin script, from

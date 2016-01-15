@@ -18,7 +18,11 @@
   {% else %}
   <tr class="odd">
   {% endif %}
+    {% if entry.date | iscurrent %}
+    <td class="current">{{ entry.week }} {{ entry.date | fmtdate }}</td>
+    {% else %}
     <td class="week">{{ entry.week }} {{ entry.date | fmtdate }}</td>
+    {% endif %}
     <td class="topic">{{ entry.topic }}</td>
     <td class="project">{{ entry.project}}</td>
   </tr>

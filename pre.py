@@ -46,10 +46,11 @@ def process(raw):
             entry['week'] = content
 
             week_num = int(content)
-            num_days = week_num*7
+            num_days = (week_num-1)*7
             new_week = base.replace(days=+num_days)
 
             entry['date'] = arrow.Arrow.isoformat(new_week)
+
 
         elif field == 'topic' or field == 'project':
             entry[field] = content
