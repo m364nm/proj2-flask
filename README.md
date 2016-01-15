@@ -3,7 +3,7 @@ A starter project for using the Flask framework
 
 ## Author: Megan McMillan
 
-# Address on ix
+## Address on ix
 
 http://ix.cs.uoregon.edu/~mcmillan/htbin/cis399/proj2-flask/
 

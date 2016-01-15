@@ -66,12 +66,7 @@ def process(raw):
 
 def main():
     f = open("static/schedule.txt")
-    print("in main before parsed base is: ")
-    print(base)
     parsed = process(f)
-    print("in main after parsed base is: ")
-    print(base)
-
     print(parsed)
 
 if __name__ == "__main__":
